@@ -1,0 +1,14 @@
+{
+  "name": "dop",
+  "version": "1.0.0",
+  "description": "Software for assessing adolescent resistance to maladaptive online behavior.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Lemaykin Alexandr",
+  "license": "",
+  "dependencies": {
+    "electron": "^12.0.2"
+  }
+}

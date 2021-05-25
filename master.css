@@ -1,0 +1,199 @@
+/* Первоначальная настройка */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+html, body {
+ height: 100%;
+ margin: 0;
+ background-color: #2B7A78;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url(Ubuntu-Regular.ttf);
+}
+
+/* Настройка главных лейаутов */
+
+.leftMenu {
+  background-color: #2B7A78;
+  padding: 5px;
+  float: left;
+  width: 20%;
+  min-height: 87%;
+}
+
+.header {
+  background-color: #2B7A78;
+  padding: 5px;
+  float: left;
+  width: 98%;
+  min-height: 7%;
+}
+
+.rightNone {
+  display: none;
+}
+
+.rightFull {
+
+
+}
+
+.rightMain {
+  background-color: #2B7A78;
+  color: white;
+  font-family: Ubuntu;
+  float: left;
+  width: 75%;
+  min-height: 87%;
+}
+
+div.rightMain div {
+  padding: 12px;
+  border-radius: 15px;
+  background-color: #3AAFA9;
+  min-height: 87%;
+  margin-bottom: 10px;
+}
+
+.rightSecond {
+  width: 97%;
+}
+
+.rightSecond p {
+  text-align: center;
+}
+
+.rightThird {
+  width: 45%;
+  float: left;
+  text-align: justify;
+}
+
+.rightFour {
+  width: 45%;
+  float: right;
+  text-align: justify;
+}
+
+#headerCaption {
+  color: white;
+  font-family: Ubuntu;
+  text-align: center;
+  padding-top: 5px;
+}
+
+div#headerCaption h1 {
+  font-size: 30pt;
+}
+
+/* Настройка кнопок меню */
+
+ul#main-menu {
+	list-style: none;
+	cursor: pointer;
+  display: block;
+}
+
+ul#main-menu > ul {
+	list-style: none;
+	opacity: 0;
+}
+
+ul#main-menu li {
+	background: #2B7A78;
+	padding: 15px 50px 15px 10px;
+	border-bottom: 1px solid #fff;
+}
+
+ul#main-menu li:hover {
+	background: #9eccb3;
+}
+
+ul#main-menu li a {
+	color: #fff;
+  font-family: Ubuntu;
+	text-decoration: none;
+}
+
+ul#main-menu i {
+	padding-right: 15px;
+	padding-left: 5px;
+}
+
+div.elList p, button {
+  display: inline-block;
+}
+
+#newObsButton {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  outline:none;
+  margin-right:8px;
+  border: none;
+  padding: 9px 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  background-color: #3AAFA9;
+  border-radius: 15px;
+}
+
+.zaklButton {
+  float: right;
+  outline:none;
+  margin-right:8px;
+  border: none;
+  padding: 2px 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2B7A78;
+  border-radius: 15px;
+}
+
+.obsDate {
+  float: right;
+  margin-right: 20px;
+}
+
+.newObsForm {
+  background-color: #7ec4ce;
+  display: inline-block;
+  outline:none;
+  padding: 9px 10px;
+  margin-right:8px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+input[placeholder] {
+  color: #fff;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+    color: #fff;
+}

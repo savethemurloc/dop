@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Оценка устойчивости подростков к дезадаптивному онлайн-поведению</title>
+    <link rel="stylesheet" type="text/css" href="master.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1 id="headerCaption"><b>Оценка устойчивости подростков к дезадаптивному онлайн-поведению</b></h1>
+    </div>
+    <div class="leftMenu">
+      <ul id="main-menu">
+        <li id="mainMenuGlav" onclick="onClickMMGlav()"><a href="#">Главная</a></li>
+        <li id="mainMenuObs" onclick="onClickMMObs()"><a href="#">Обследования</a></li>
+        <li id="mainMenuStats" onclick="onClickMMStats()"><a href="#">Статистика</a></li>
+        <li id="mainMenuSprav" onclick="onClickMMSprav()"><a href="#">Справочник</a></li>
+        <li id="mainMenuSettings" onclick="onClickMMSettings()"><a href="#">Настройки</a></li>
+      </ul>
+    </div>
+    <div class="rightMain" id="glavnaya">
+      <div class="rightSecond">
+        <p><b>Главная</b></p>
+      </div>
+      <div class="rightThird">
+        <h3>Обследования</h3>
+        <br>
+        <p>В данном разделе можно посмотреть проведенные обследования, а также начать новое обследование.</p>
+      </div>
+      <div class="rightFour">
+        <h3>Статистика</h3>
+        <br>
+        <p>В разделе статистики можно посмотреть графики по всем проведенным обследованиям.</p>
+      </div>
+      <div class="rightThird">
+        <h3>Справочник</h3>
+        <br>
+        <p>В этом разделе можно посмотреть справку по работе с программой.</p>
+        <br>
+      </div>
+      <div class="rightFour">
+        <h3>Настройки</h3>
+        <br>
+        <p>В разделе настроек можно изменить пользовательские настройки.</p>
+        <br>
+      </div>
+    </div>
+    <!-- ################## -->
+    <div class="rightNone" id="allObs">
+      <div class="rightSecond">
+        <p><b>Обследования</b></p>
+      </div>
+      <div class="elList">
+        <p>Иванов </p>
+        <p>Иван </p>
+        <p>Иванович </p>
+        <button class="zaklButton">Заключение</button>
+
+        <p class="obsDate">19.04.2021 </p>
+        <p class="obsDate">Дата обследования: </p>
+      </div>
+      <div class="elList">
+        <p>Петров </p>
+        <p>Петр </p>
+        <p>Петрович </p>
+        <button class="zaklButton">Заключение</button>
+
+        <p class="obsDate">19.04.2021 </p>
+        <p class="obsDate">Дата обследования: </p>
+      </div>
+      <div class="elList">
+        <p>Сафонов </p>
+        <p>Чеслав </p>
+        <p>Артёмович </p>
+        <button class="zaklButton">Заключение</button>
+
+        <p class="obsDate">19.04.2021 </p>
+        <p class="obsDate">Дата обследования: </p>
+      </div>
+      <div class="elList">
+        <p>Шумило </p>
+        <p>Эдуард </p>
+        <p>Гавриилович </p>
+        <button class="zaklButton">Заключение</button>
+
+        <p class="obsDate">19.04.2021 </p>
+        <p class="obsDate">Дата обследования: </p>
+      </div>
+      <div class="elList">
+        <p>Орехов </p>
+        <p>Ждан </p>
+        <p>Станиславович </p>
+        <button class="zaklButton">Заключение</button>
+
+        <p class="obsDate">19.04.2021 </p>
+        <p class="obsDate">Дата обследования: </p>
+      </div>
+      <button id="newObsButton" onclick="onClickNewObs()">Новое обследование</button>
+    </div>
+    <!-- ################## -->
+    <div class="rightNone" id="allStats">
+      <div class="rightSecond">
+        <p><b>Статистика</b></p>
+      </div>
+      <div>
+
+      </div>
+    </div>
+    <!-- ################## -->
+    <div class="rightNone" id="allSprav">
+      <div class="rightSecond">
+        <p><b>Справочник</b></p>
+      </div>
+      <div>
+
+      </div>
+    </div>
+    <!-- ################## -->
+    <div class="rightNone" id="allSettings">
+      <div class="rightSecond">
+        <p><b>Настройки</b></p>
+      </div>
+      <div>
+
+      </div>
+    </div>
+    <!-- ################## -->
+    <div class="rightNone" id="newObs">
+      <div class="rightSecond">
+        <p><b>Новое обследование</b></p>
+      </div>
+      <div>
+        <input type="text" placeholder="№ Протокола" class="newObsForm"></input>
+        <input type="date" placeholder="Дата обследования" class="newObsForm"></input>
+        <input type="text" placeholder="Возраст" class="newObsForm"></input>
+        <input type="text" placeholder="Фамилия" class="newObsForm"></input>
+        <input type="text" placeholder="Имя" class="newObsForm"></input>
+        <input type="text" placeholder="Отчество" class="newObsForm"></input>
+        <select class="newObsForm">
+          <option value="">Мужской</option>
+          <option value="">Женский</option>
+        </select>
+        <select class="newObsForm">
+          <option value="">Младшая (12-14 лет)</option>
+          <option value="">Старшая (15-18 лет)</option>
+        </select>
+        <input type="text" placeholder="Национальность" class="newObsForm"></input>
+        <input type="text" placeholder="Национальность отца" class="newObsForm"></input>
+        <input type="text" placeholder="Национальность матери" class="newObsForm"></input>
+        <input type="text" placeholder="Домашний адрес" class="newObsForm"></input>
+        <input type="text" placeholder="Контакный телефон" class="newObsForm"></input>
+        <input type="text" placeholder="Учебное заведение" class="newObsForm"></input>
+        <input type="text" placeholder="Класс/группа" class="newObsForm"></input>
+        <br>
+        <p>Использование гаджетов (моб.телефон, планшет, компьютер):</p>
+        <p>Сколько дней в неделю</p>
+        <select class="newObsForm">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+          <option value="">6</option>
+          <option value="">7</option>
+        </select>
+        <p>Сколько часов в день</p>
+        <select class="newObsForm">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+          <option value="">6</option>
+          <option value="">7</option>
+          <option value="">8</option>
+          <option value="">9</option>
+          <option value="">10</option>
+          <option value="">11</option>
+          <option value="">12</option>
+          <option value="">13</option>
+          <option value="">14</option>
+          <option value="">15</option>
+          <option value="">16</option>
+          <option value="">17</option>
+          <option value="">18</option>
+          <option value="">19</option>
+          <option value="">20</option>
+          <option value="">21</option>
+          <option value="">22</option>
+          <option value="">23</option>
+          <option value="">24</option>
+        </select>
+        <p>Уровень компьютерных нагрузок</p>
+        <select class="newObsForm">
+          <option value="">Высокий</option>
+          <option value="">Средний</option>
+          <option value="">Низкий</option>
+        </select>
+        <p></p>
+        <input type="text" placeholder="Вес (кг)" class="newObsForm"></input>
+        <input type="text" placeholder="Рост (см)" class="newObsForm"></input>
+        <input type="text" placeholder="Пульс (уд/мин)" class="newObsForm"></input>
+        <input type="text" placeholder="Систолическое АД" class="newObsForm"></input>
+        <input type="text" placeholder="Диастолическое АД" class="newObsForm"></input>
+      </div>
+      <button id="newObsButton" onclick="">Создать обследование</button>
+    </div>
+    <script>
+      require('./render.js');
+
+      function onClickMMObs() {
+        hideAll();
+        showObs();
+      }
+
+      function onClickMMGlav() {
+        hideAll();
+        showGlav();
+      }
+
+      function onClickMMSprav() {
+        hideAll();
+        showSprav();
+      }
+
+      function onClickMMStats() {
+        hideAll();
+        showStats();
+      }
+
+      function onClickMMSettings() {
+        hideAll();
+        showSettings();
+      }
+
+      function onClickNewObs() {
+        hideAll();
+        showNewObs();
+      }
+
+      function showGlav() {
+        document.getElementById('glavnaya').removeAttribute("class");
+        document.getElementById('glavnaya').setAttribute("class", "rightMain");
+      }
+
+      function hideGlav() {
+        document.getElementById('glavnaya').removeAttribute("class");
+        document.getElementById('glavnaya').setAttribute("class", "rightNone");
+      }
+
+      function showObs() {
+        document.getElementById('allObs').removeAttribute("class");
+        document.getElementById('allObs').setAttribute("class", "rightMain");
+      }
+
+      function hideObs() {
+        document.getElementById('allObs').removeAttribute("class");
+        document.getElementById('allObs').setAttribute("class", "rightNone");
+      }
+
+      function showStats() {
+        document.getElementById('allStats').removeAttribute("class");
+        document.getElementById('allStats').setAttribute("class", "rightMain");
+      }
+
+      function hideStats() {
+        document.getElementById('allStats').removeAttribute("class");
+        document.getElementById('allStats').setAttribute("class", "rightNone");
+      }
+
+      function showSprav() {
+        document.getElementById('allSprav').removeAttribute("class");
+        document.getElementById('allSprav').setAttribute("class", "rightMain");
+      }
+
+      function hideSprav() {
+        document.getElementById('allSprav').removeAttribute("class");
+        document.getElementById('allSprav').setAttribute("class", "rightNone");
+      }
+
+      function showSettings() {
+        document.getElementById('allSettings').removeAttribute("class");
+        document.getElementById('allSettings').setAttribute("class", "rightMain");
+      }
+
+      function hideSettings() {
+        document.getElementById('allSettings').removeAttribute("class");
+        document.getElementById('allSettings').setAttribute("class", "rightNone");
+      }
+
+      function showNewObs() {
+        document.getElementById('newObs').removeAttribute("class");
+        document.getElementById('newObs').setAttribute("class", "rightMain");
+      }
+
+      function hideNewObs() {
+        document.getElementById('newObs').removeAttribute("class");
+        document.getElementById('newObs').setAttribute("class", "rightNone");
+      }
+
+      function hideAll() {
+        hideObs();
+        hideGlav();
+        hideSprav();
+        hideStats();
+        hideSettings();
+        hideNewObs();
+      }
+    </script>
+  </body>
+</html>
