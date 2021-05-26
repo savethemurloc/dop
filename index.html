@@ -59,42 +59,6 @@
         <p class="obsDate">19.04.2021 </p>
         <p class="obsDate">Дата обследования: </p>
       </div>
-      <div class="elList">
-        <p>Петров </p>
-        <p>Петр </p>
-        <p>Петрович </p>
-        <button class="zaklButton">Заключение</button>
-
-        <p class="obsDate">19.04.2021 </p>
-        <p class="obsDate">Дата обследования: </p>
-      </div>
-      <div class="elList">
-        <p>Сафонов </p>
-        <p>Чеслав </p>
-        <p>Артёмович </p>
-        <button class="zaklButton">Заключение</button>
-
-        <p class="obsDate">19.04.2021 </p>
-        <p class="obsDate">Дата обследования: </p>
-      </div>
-      <div class="elList">
-        <p>Шумило </p>
-        <p>Эдуард </p>
-        <p>Гавриилович </p>
-        <button class="zaklButton">Заключение</button>
-
-        <p class="obsDate">19.04.2021 </p>
-        <p class="obsDate">Дата обследования: </p>
-      </div>
-      <div class="elList">
-        <p>Орехов </p>
-        <p>Ждан </p>
-        <p>Станиславович </p>
-        <button class="zaklButton">Заключение</button>
-
-        <p class="obsDate">19.04.2021 </p>
-        <p class="obsDate">Дата обследования: </p>
-      </div>
       <button id="newObsButton" onclick="onClickNewObs()">Новое обследование</button>
     </div>
     <!-- ################## -->
@@ -203,8 +167,523 @@
         <input type="text" placeholder="Систолическое АД" class="newObsForm"></input>
         <input type="text" placeholder="Диастолическое АД" class="newObsForm"></input>
       </div>
-      <button id="newObsButton" onclick="">Создать обследование</button>
+      <button id="newObsButton" onclick="onClickCreateObs()">Создать обследование</button>
     </div>
+    <!-- ################## -->
+    <div class="rightNone" id="Quests1">
+      <div class="oneQuest"> 
+        <p>Игровая зависимость (есть/нет)</p>
+        <input type="radio" name="q1" id="q1">Да
+        <input type="radio" name="q1" id="q1">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Игровая зависимость по мягким критериям </p>
+        <input type="radio" name="q2" id="q2">Да
+        <input type="radio" name="q2" id="q2">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Игровая зависимость по строгим критериям</p>
+        <input type="radio" name="q3" id="q3">Да
+        <input type="radio" name="q3" id="q3">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Зависимость от социальных сетей</p>
+        <input type="radio" name="q4" id="q4">Да
+        <input type="radio" name="q4" id="q4">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Смешанная интернет-зависимость</p>
+        <input type="radio" name="q5" id="q5">Да
+        <input type="radio" name="q5" id="q5">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Недифференцированная интернет-зависимость</p>
+        <input type="radio" name="q6" id="q6">Да
+        <input type="radio" name="q6" id="q6">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Рецидивирующие головные боли (РГБ) есть/нет</p>
+        <input type="radio" name="q7" id="q7">Да
+        <input type="radio" name="q7" id="q7">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Редкие головные боли (РГБ)</p>
+        <input type="radio" name="q8" id="q8">Да
+        <input type="radio" name="q8" id="q8">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext1Button()">Далее</button>
+    </div>
+<!-- ################## -->
+    <div class="rightNone" id="Quests2">
+      <div class="oneQuest"> 
+        <p>Частые головные боли (РГБ) </p>
+        <input type="radio" name="q9" id="q9">Да
+        <input type="radio" name="q9" id="q9">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Рецидивирующие боли в животе (РБЖ) есть/нет </p>
+        <input type="radio" name="q10" id="q10">Да
+        <input type="radio" name="q10" id="q10">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Редкие боли в животе (РБЖ) </p>
+        <input type="radio" name="q11" id="q11">Да
+        <input type="radio" name="q11" id="q11">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Частые боли в животе (РБЖ) </p>
+        <input type="radio" name="q12" id="q12">Да
+        <input type="radio" name="q12" id="q12">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Боли в спине (есть/нет)</p>
+        <input type="radio" name="q13" id="q13">Да
+        <input type="radio" name="q13" id="q13">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Редкие боли в спине</p>
+        <input type="radio" name="q14" id="q14">Да
+        <input type="radio" name="q14" id="q14">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Частые боли в спине </p>
+        <input type="radio" name="q15" id="q15">Да
+        <input type="radio" name="q15" id="q15">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Боли в шее </p>
+        <input type="radio" name="q16" id="q16">Да
+        <input type="radio" name="q16" id="q16">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext2Button()">Далее</button>
+    </div>
+<!-- ################## -->
+    <div class="rightNone" id="Quests3">
+      <div class="oneQuest"> 
+        <p>Боли в грудном отделе позвоночника </p>
+        <input type="radio" name="q17" id="q17">Да
+        <input type="radio" name="q17" id="q17">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Боли в поясничном отделе позвоночника </p>
+        <input type="radio" name="q18" id="q18">Да
+        <input type="radio" name="q18" id="q18">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Боли в спине сочетанные</p>
+        <input type="radio" name="q19" id="q19">Да
+        <input type="radio" name="q19" id="q19">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Астенический синдром (АС) - наличие 10 признаков</p>
+        <input type="radio" name="q20" id="q20">Да
+        <input type="radio" name="q20" id="q20">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Астенический синдром (АС) - наличие 6 признаков</p>
+        <input type="radio" name="q21" id="q21">Да
+        <input type="radio" name="q21" id="q21">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Дневная сонливость (>26 баллов)</p>
+        <input type="radio" name="q22" id="q22">Да
+        <input type="radio" name="q22" id="q22">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Дневная сонливость (>22 баллов) </p>
+        <input type="radio" name="q23" id="q23">Да
+        <input type="radio" name="q23" id="q23">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>ГЭРБ возможная </p>
+        <input type="radio" name="q24" id="q24">Да
+        <input type="radio" name="q24" id="q24">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext3Button()">Далее</button>
+    </div>
+<!-- ################## -->
+    <div class="rightNone" id="Quests4">
+      <div class="oneQuest"> 
+        <p>ГЭРБ наиболее вероятная </p>
+        <input type="radio" name="q25" id="q25">Да
+        <input type="radio" name="q25" id="q25">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Просоциальное поведение - пограничное </p>
+        <input type="radio" name="q26" id="q26">Да
+        <input type="radio" name="q26" id="q26">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Просоциальное поведение - отклоняющееся</p>
+        <input type="radio" name="q27" id="q27">Да
+        <input type="radio" name="q27" id="q27">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Пограничное число проблем</p>
+        <input type="radio" name="q28" id="q28">Да
+        <input type="radio" name="q28" id="q28">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Значительное число проблем  </p>
+        <input type="radio" name="q29" id="q29">Да
+        <input type="radio" name="q29" id="q29">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Пограничное поведение</p>
+        <input type="radio" name="q30" id="q30">Да
+        <input type="radio" name="q30" id="q30">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Отклоняющееся поведение</p>
+        <input type="radio" name="q31" id="q31">Да
+        <input type="radio" name="q31" id="q31">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Незначительные (пограничные) эмоциональные нарушения </p>
+        <input type="radio" name="q32" id="q32">Да
+        <input type="radio" name="q32" id="q32">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext4Button()">Далее</button>
+    </div>
+    <!-- ################## -->
+    <div class="rightNone" id="Quests5">
+      <div class="oneQuest"> 
+        <p>Выраженные (отклоняющиеся) эмоциональные нарушения</p>
+        <input type="radio" name="q33" id="q33">Да
+        <input type="radio" name="q33" id="q33">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Незначительные (пограничные) проявления гиперактивности </p>
+        <input type="radio" name="q34" id="q34">Да
+        <input type="radio" name="q34" id="q34">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Значительные (отклоняющиеся) проявления гиперактивности</p>
+        <input type="radio" name="q35" id="q35">Да
+        <input type="radio" name="q35" id="q35">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Незначительные (пограничные) проблемы со сверстниками</p>
+        <input type="radio" name="q36" id="q36">Да
+        <input type="radio" name="q36" id="q36">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Значительные (отклоняющиеся) проблемы со сверстниками</p>
+        <input type="radio" name="q37" id="q37">Да
+        <input type="radio" name="q37" id="q37">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Праволатеральный профиль ФМА </p>
+        <input type="radio" name="q38" id="q38">Да
+        <input type="radio" name="q38" id="q38">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Амбидекстральный профиль ФМА </p>
+        <input type="radio" name="q39" id="q39">Да
+        <input type="radio" name="q39" id="q39">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Психотизм - умеренный уровень</p>
+        <input type="radio" name="q40" id="q40">Да
+        <input type="radio" name="q40" id="q40">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext5Button()">Далее</button>
+    </div>
+    <!-- ################## -->
+    <div class="rightNone" id="Quests6">
+      <div class="oneQuest"> 
+        <p>Личностная тревожность - умеренная </p>
+        <input type="radio" name="q41" id="q41">Да
+        <input type="radio" name="q41" id="q41">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Личностная тревожность - высокая </p>
+        <input type="radio" name="q42" id="q42">Да
+        <input type="radio" name="q42" id="q42">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Реактивная (ситуационная) тревожность - высокая </p>
+        <input type="radio" name="q43" id="q43">Да
+        <input type="radio" name="q43" id="q43">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Эмоциональное состояние - умеренно выраженный уровень</p>
+        <input type="radio" name="q44" id="q44">Да
+        <input type="radio" name="q44" id="q44">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Ответственность - умеренно выраженный уровень  </p>
+        <input type="radio" name="q45" id="q45">Да
+        <input type="radio" name="q45" id="q45">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Пассивные суицидальные мысли - умеренно выраженный уровень</p>
+        <input type="radio" name="q46" id="q46">Да
+        <input type="radio" name="q46" id="q46">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Пассивные суицидальные мысли - высокий уровень</p>
+        <input type="radio" name="q47" id="q47">Да
+        <input type="radio" name="q47" id="q47">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Сдержанный </p>
+        <input type="radio" name="q48" id="q48">Да
+        <input type="radio" name="q48" id="q48">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext6Button()">Далее</button>
+    </div>
+    <!-- ################## -->
+    <div class="rightNone" id="Quests7">
+      <div class="oneQuest"> 
+        <p>Самостоятельный </p>
+        <input type="radio" name="q49" id="q49">Да
+        <input type="radio" name="q49" id="q49">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>С богатым воображением</p>
+        <input type="radio" name="q50" id="q50">Да
+        <input type="radio" name="q50" id="q50">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Прямолинейный</p>
+        <input type="radio" name="q51" id="q51">Да
+        <input type="radio" name="q51" id="q51">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Самооценка высокая</p>
+        <input type="radio" name="q52" id="q52">Да
+        <input type="radio" name="q52" id="q52">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>В интернете интересует - Общение в социальных сетях, знакомства </p>
+        <input type="radio" name="q53" id="q53">Да
+        <input type="radio" name="q53" id="q53">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>В интернете интересует - Чтение книг (исторических, художественных, по искусству) </p>
+        <input type="radio" name="q54" id="q54">Да
+        <input type="radio" name="q54" id="q54">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>В интеренте интересует - Скачивание песен, музыкальных композиций</p>
+        <input type="radio" name="q55" id="q55">Да
+        <input type="radio" name="q55" id="q55">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>В интернете интересует - Разработка сайтов, аккаунтов, собственных блогов </p>
+        <input type="radio" name="q56" id="q56">Да
+        <input type="radio" name="q56" id="q56">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext7Button()">Далее</button>
+    </div>
+    <!-- ################## -->
+       
+    <div class="rightNone" id="Quests8">
+      <div class="oneQuest"> 
+        <p>В интернете интересуют сайты и информация, посвященные происшествиям </p>
+        <input type="radio" name="q57" id="q57">Да
+        <input type="radio" name="q57" id="q57">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>В интернете интересуют сайты и информация, посвященные спорту</p>
+        <input type="radio" name="q58" id="q58">Да
+        <input type="radio" name="q58" id="q58">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Круг интересов в инернете - Математика</p>
+        <input type="radio" name="q59" id="q59">Да
+        <input type="radio" name="q59" id="q59">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Круг интересов в интернете - Биология</p>
+        <input type="radio" name="q60" id="q60">Да
+        <input type="radio" name="q60" id="q60">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Круг интересов в интернете - Другое  </p>
+        <input type="radio" name="q61" id="q61">Да
+        <input type="radio" name="q61" id="q61">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Причины увлечения соц. сетями - Легче общаться письменно, чем «вживую»</p>
+        <input type="radio" name="q62" id="q62">Да
+        <input type="radio" name="q62" id="q62">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Причины увлечения соц. сетями - Нет подходящих людей для общения в Вашем окружении, которые разделяли бы Ваши взгляды</p>
+        <input type="radio" name="q63" id="q63">Да
+        <input type="radio" name="q63" id="q63">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Причины увлечения соц.сетями - Желание быть популярным </p>
+        <input type="radio" name="q64" id="q64">Да
+        <input type="radio" name="q64" id="q64">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext8Button()">Далее</button>
+    </div>
+     <!-- ################## -->
+     <div class="rightNone" id="Quests9">
+      <div class="oneQuest"> 
+        <p>Выкладывание своих роликов, фотографий </p>
+        <input type="radio" name="q65" id="q65">Да
+        <input type="radio" name="q65" id="q65">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Причины увлечения соц.сетями - Высказывание своего мнения по различным вопросам</p>
+        <input type="radio" name="q66" id="q66">Да
+        <input type="radio" name="q66" id="q66">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Причины увлечения соц.сетями - Осуждение и критика в адрес кого-то или чего-то</p>
+        <input type="radio" name="q67" id="q67">Да
+        <input type="radio" name="q67" id="q67">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Вы занимаетесь спортом</p>
+        <input type="radio" name="q68" id="q68">Да
+        <input type="radio" name="q68" id="q68">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Занимаетесь спортом самостоятельно</p>
+        <input type="radio" name="q69" id="q69">Да
+        <input type="radio" name="q69" id="q69">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Вы проводите свободное время с друзьями</p>
+        <input type="radio" name="q70" id="q70">Да
+        <input type="radio" name="q70" id="q70">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Любите слушать музыку средней громкости </p>
+        <input type="radio" name="q71" id="q71">Да
+        <input type="radio" name="q71" id="q71">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Любите слушать громкую музыку </p>
+        <input type="radio" name="q72" id="q72">Да
+        <input type="radio" name="q72" id="q72">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext9Button()">Далее</button>
+    </div>
+     <!-- ################## -->
+     <div class="rightNone" id="Quests10">
+      <div class="oneQuest"> 
+        <p>Трудности общения с педагогами есть (или были) </p>
+        <input type="radio" name="q73" id="q73">Да
+        <input type="radio" name="q73" id="q73">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Трудностей общения нет </p>
+        <input type="radio" name="q74" id="q74">Да
+        <input type="radio" name="q74" id="q74">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Конфликтов (с родителями, членами семьи, педагогами, одноклассниками) не было</p>
+        <input type="radio" name="q75" id="q75">Да
+        <input type="radio" name="q75" id="q75">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Употребление энергетических напитков</p>
+        <input type="radio" name="q76" id="q76">Да
+        <input type="radio" name="q76" id="q76">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Пробовали курить сигареты</p>
+        <input type="radio" name="q77" id="q77">Да
+        <input type="radio" name="q77" id="q77">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Головные боли</p>
+        <input type="radio" name="q78" id="q78">Да
+        <input type="radio" name="q78" id="q78">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Заикание</p>
+        <input type="radio" name="q79" id="q79">Да
+        <input type="radio" name="q79" id="q79">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Утомляемость </p>
+        <input type="radio" name="q80" id="q80">Да
+        <input type="radio" name="q80" id="q80">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext10Button()">Далее</button>
+    </div>
+     <!-- ################## -->
+     <div class="rightNone" id="Quests11">
+      <div class="oneQuest"> 
+        <p>Раздражительность </p>
+        <input type="radio" name="q81" id="q81">Да
+        <input type="radio" name="q81" id="q81">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Гневливость </p>
+        <input type="radio" name="q82" id="q82">Да
+        <input type="radio" name="q82" id="q82">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Обидчивость</p>
+        <input type="radio" name="q83" id="q83">Да
+        <input type="radio" name="q83" id="q83">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Перепады настроения</p>
+        <input type="radio" name="q84" id="q84">Да
+        <input type="radio" name="q84" id="q84">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Страхи (без видимой причины)  </p>
+        <input type="radio" name="q85" id="q85">Да
+        <input type="radio" name="q85" id="q85">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Тошнота</p>
+        <input type="radio" name="q86" id="q86">Да
+        <input type="radio" name="q86" id="q86">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Нарушение осанки</p>
+        <input type="radio" name="q87" id="q87">Да
+        <input type="radio" name="q87" id="q87">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Сколиоз </p>
+        <input type="radio" name="q88" id="q88">Да
+        <input type="radio" name="q88" id="q88">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext11Button()">Далее</button>
+    </div>
+     <!-- ################## -->
+     <div class="rightNone" id="Quests12">
+      <div class="oneQuest"> 
+        <p>Плоскостопие </p>
+        <input type="radio" name="q89" id="q89">Да
+        <input type="radio" name="q89" id="q89">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Грусть </p>
+        <input type="radio" name="q90" id="q90">Да
+        <input type="radio" name="q90" id="q90">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Печаль</p>
+        <input type="radio" name="q91" id="q91">Да
+        <input type="radio" name="q91" id="q91">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Мысли о бессмысленности своего существования</p>
+        <input type="radio" name="q92" id="q92">Да
+        <input type="radio" name="q92" id="q92">Нет (или не определялся)
+      </div>
+      <div class="oneQuest"> 
+        <p>Мысли о своей ненужности для окружающих и близких людей  </p>
+        <input type="radio" name="q93" id="q93">Да
+        <input type="radio" name="q93" id="q93">Нет (или не определялся)
+      </div>
+      <button id="newObsButton" onclick="onClickNext12Button()">Закончить обследование</button>
+    </div>
+     <!-- ################## -->
     <script src="logisticLogic.js"></script>
   </body>
 </html>
